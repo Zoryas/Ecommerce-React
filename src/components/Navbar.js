@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../context/CartContext';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { cartItems } = useContext(CartContext);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -12,7 +14,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        {/* Logo moved more to the left */}
+
         <div className="logo-container">
           <Link to="/" className="nav-logo">
             <span className="logo-icon">🍦</span>
@@ -20,7 +22,6 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Navigation Links */}
         <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           <Link to="/" className="nav-link" onClick={() => setIsMenuOpen(false)}>
             Home
@@ -36,7 +37,6 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Right Side Icons */}
         <div className="nav-icons">
           <Link to="/search" className="nav-icon">
             <i className="fas fa-search"></i>
@@ -46,11 +46,11 @@ const Navbar = () => {
           </Link>
           <Link to="/cart" className="nav-icon">
             <i className="fas fa-shopping-cart"></i>
-            <span className="cart-count">0</span>
+
+            <span className="cart-count">{cartItems.length}</span>
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
         <div className="nav-toggle" onClick={toggleMenu}>
           <span className="bar"></span>
           <span className="bar"></span>

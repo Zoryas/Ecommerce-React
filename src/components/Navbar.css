@@ -8,6 +8,10 @@
   border-bottom: 3px solid #ff6b88;
 }
 
+body {
+  padding-top: 80px;
+}
+
 .nav-container {
   max-width: 1400px; 
   margin: 0 auto;
@@ -17,7 +21,6 @@
   align-items: center;
   height: 80px;
 }
-
 
 .logo-container {
   margin-right: auto; 
@@ -166,7 +169,6 @@
   background-color: #ff6b88;
 }
 
-/* Mobile Styles */
 @media screen and (max-width: 768px) {
   .nav-container {
     padding: 0 20px;
@@ -226,7 +228,6 @@
   }
 }
 
-/* Specific extra small devices */
 @media screen and (max-width: 480px) {
   .nav-logo {
     font-size: 1.3rem;
