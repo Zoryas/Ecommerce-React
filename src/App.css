@@ -15,7 +15,7 @@ body {
 }
 
 .main-content {
-  margin-top: 70px; /* Offset for fixed navbar */
+  margin-top: 70px;
   padding: 20px;
   min-height: calc(100vh - 70px);
 }
