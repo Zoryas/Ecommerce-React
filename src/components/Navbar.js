@@ -1,7 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
-import './Navbar.css';
+import iceCreamIcon from '../assets/images/icons/ice-cream.png';
+import '../css/Navbar.css';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +18,12 @@ const Navbar = () => {
 
         <div className="logo-container">
           <Link to="/" className="nav-logo">
-            <span className="logo-icon">🍦</span>
+            {/*ice cream icon*/}
+            <img 
+              src={iceCreamIcon} 
+              alt="J & J Ice Cream" 
+              className="logo-icon"
+            />
             J & J - Ice Cream Shop
           </Link>
         </div>

@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+.main-content {
+  margin-top: 70px;
+  padding: 20px;
+  min-height: calc(100vh - 70px);
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.page h1 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.page p {
+  color: #666;
+  font-size: 1.1rem;
+}
+/*Custom Scrollbar*/
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff8f8;
+  border-radius: 10px;
+  border: 3px solid #ffe4e6;
+  box-shadow: inset 0 0 10px rgba(255, 182, 193, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: 
+    linear-gradient(135deg, 
+      #ff9a9e 0%, 
+      #fad0c4 25%, 
+      #ff6b88 50%, 
+      #ff8e53 75%, 
+      #ffd6e0 100%);
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+  position: relative;
+  box-shadow: 
+    0 0 10px rgba(255, 107, 136, 0.4),
+    inset 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: 
+    linear-gradient(135deg, 
+      #ff6b88 0%, 
+      #ff9a9e 25%, 
+      #ff8e53 50%, 
+      #fad0c4 75%, 
+      #ff9a9e 100%);
+  box-shadow: 
+    0 0 15px rgba(255, 107, 136, 0.6),
+    inset 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+::-webkit-scrollbar-thumb::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 2px;
+  box-shadow: 0 0 5px white;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ff6b88 #fff8f8;
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #ff6b88 #fff8f8;
+}

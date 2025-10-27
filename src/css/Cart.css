@@ -1,0 +1,261 @@
+.cart-page {
+  padding: 40px;
+  text-align: center;
+  color: #4b2e05;
+  position: relative;
+  min-height: 80vh;
+}
+
+.cart-title {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}
+
+.empty-cart {
+  font-size: 1.1rem;
+  color: #888;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(255, 99, 132, 0.2);
+  padding: 15px;
+  transition: transform 0.2s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-4px);
+}
+
+.cart-item-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.cart-item-info {
+  flex-grow: 1;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.cart-item-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.cart-item-info p {
+  color: #e44d26;
+  font-weight: bold;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.quantity-btn {
+  background: #ff9a9e;
+  color: white;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.quantity-btn:hover {
+  background: #ff6b88;
+}
+
+.quantity {
+  font-size: 0.9rem;
+  font-weight: bold;
+  min-width: 60px;
+  text-align: center;
+}
+
+.item-total {
+  color: #4b2e05;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.remove-btn {
+  background-color: #ff6666;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: #cc0000;
+}
+
+.cart-summary {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(255, 99, 132, 0.2);
+  padding: 15px;
+  width: 220px;
+  border: 1px solid #ffe4e6;
+  z-index: 100;
+}
+
+.summary-title {
+  font-size: 1rem;
+  color: #4b2e05;
+  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.summary-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 0;
+}
+
+.summary-label {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.summary-value {
+  font-size: 0.8rem;
+  color: #4b2e05;
+  font-weight: 600;
+}
+
+.total-row {
+  border-top: 1px solid #ff9a9e;
+  padding-top: 6px;
+  margin-top: 3px;
+}
+
+.total-row .summary-label {
+  font-size: 0.9rem;
+  color: #4b2e05;
+  font-weight: 600;
+}
+
+.total-row .summary-value {
+  font-size: 0.9rem;
+  color: #e44d26;
+  font-weight: bold;
+}
+
+.checkout-btn {
+  width: 100%;
+  background: linear-gradient(45deg, #ff6699, #ff9966);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.checkout-btn:hover {
+  background: linear-gradient(45deg, #ff3366, #ff6600);
+  transform: translateY(-1px);
+}
+
+/*Custom Scrollbar*/
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff8f8;
+  border-radius: 10px;
+  border: 3px solid #ffe4e6;
+  box-shadow: inset 0 0 10px rgba(255, 182, 193, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: 
+    linear-gradient(135deg, 
+      #ff9a9e 0%, 
+      #fad0c4 25%, 
+      #ff6b88 50%, 
+      #ff8e53 75%, 
+      #ffd6e0 100%);
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+  position: relative;
+  box-shadow: 
+    0 0 10px rgba(255, 107, 136, 0.4),
+    inset 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: 
+    linear-gradient(135deg, 
+      #ff6b88 0%, 
+      #ff9a9e 25%, 
+      #ff8e53 50%, 
+      #fad0c4 75%, 
+      #ff9a9e 100%);
+  box-shadow: 
+    0 0 15px rgba(255, 107, 136, 0.6),
+    inset 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+::-webkit-scrollbar-thumb::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 2px;
+  box-shadow: 0 0 5px white;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ff6b88 #fff8f8;
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #ff6b88 #fff8f8;
+}

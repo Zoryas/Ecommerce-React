@@ -1,9 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { CartContext } from '../context/CartContext';
-import './Products.css';
+import '../css/Products.css';
 
 const Products = () => {
   const { addToCart } = useContext(CartContext);
+  const [quantities, setQuantities] = useState({});
 
   const products = [
     {
@@ -68,17 +69,71 @@ const Products = () => {
     },
   ];
 
+  const handleQuantityChange = (productId, change) => {
+    setQuantities(prev => {
+      const currentQuantity = prev[productId] || 1;
+      const newQuantity = currentQuantity + change;
+      
+      if (newQuantity < 1) return prev; // no below 1
+      if (newQuantity > 10) return prev; // max quantity
+      
+      return {
+        ...prev,
+        [productId]: newQuantity
+      };
+    });
+  };
+
+  const handleAddToCart = (product) => {
+    const quantity = quantities[product.id] || 1;
+    addToCart({ ...product, quantity });
+    
+    // show confimation
+    setQuantities(prev => ({
+      ...prev,
+      [product.id]: 1 // reset to 1 after adding
+    }));
+  };
+
+  const getQuantity = (productId) => {
+    return quantities[productId] || 1;
+  };
+
   return (
     <div className="products-page">
       <h2 className="products-title">Our Flavors</h2>
       <div className="products-grid">
         {products.map((product) => (
           <div className="product-card" key={product.id}>
-            <img src={product.image} alt={product.name} className="product-image" />
+            <div className="product-image-container">
+              <img src={product.image} alt={product.name} className="product-image" />
+            </div>
             <h3 className="product-name">{product.name}</h3>
+            
+            <div className="quantity-selector">
+              <div className="quantity-controls">
+                <button 
+                  className="quantity-btn minus"
+                  onClick={() => handleQuantityChange(product.id, -1)}
+                >
+                  -
+                </button>
+                <span className="quantity-display">{getQuantity(product.id)}</span>
+                <button 
+                  className="quantity-btn plus"
+                  onClick={() => handleQuantityChange(product.id, 1)}
+                >
+                  +
+                </button>
+              </div>
+            </div>
+
             <div className="product-footer">
               <p className="product-price">₱{product.price}</p>
-              <button className="add-to-cart" onClick={() => addToCart(product)}>
+              <button 
+                className="add-to-cart" 
+                onClick={() => handleAddToCart(product)}
+              >
                 Add to Cart
               </button>
             </div>
@@ -90,4 +145,3 @@ const Products = () => {
 };
 
 export default Products;
-
