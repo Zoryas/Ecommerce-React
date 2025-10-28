@@ -13,13 +13,82 @@ body {
 }
 
 .nav-container {
-  max-width: 1400px; 
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 30px; 
+  padding: 0 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 80px;
+}
+
+@media (max-width: 1024px) {
+  .nav-container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 10px;
+    height: 70px;
+  }
+  body {
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-container {
+    padding: 0 5px;
+    height: 60px;
+  }
+  body {
+    padding-top: 60px;
+  }
+  .nav-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 3px;
+    height: 55px;
+  }
+  body {
+    padding-top: 55px;
+  }
+}
+
+@media (max-width: 320px) {
+  .nav-container {
+    padding: 0 2px;
+    height: 50px;
+  }
+  body {
+    padding-top: 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav-container {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .nav-container {
+    padding: 0 50px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .nav-container {
+    padding: 0 60px;
+  }
 }
 
 .logo-container {
@@ -265,6 +334,23 @@ body {
 
   .nav-container {
     padding: 0 15px;
+  }
+
+  .nav-icon {
+    width: 25px;
+    height: 25px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-logo::after {
+    content: "J & J";
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #8b4513;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
   }
 }
 
