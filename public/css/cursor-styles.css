@@ -1,0 +1,20 @@
+/* Custom Cursor Styles */
+* {
+  cursor: url('/cursors/normal.cur'), auto;
+}
+
+a, button, [role="button"], .login-btn, .checkout-btn, .quantity-btn, .remove-btn, .add-to-cart {
+  cursor: url('/cursors/link.cur'), pointer !important;
+}
+
+input, textarea, select, [contenteditable="true"] {
+  cursor: url('/cursors/text.cur'), text !important;
+}
+
+.loading, [aria-busy="true"] {
+  cursor: url('/cursors/busy.ani'), wait !important;
+}
+
+.working {
+  cursor: url('/cursors/working.ani'), progress !important;
+}

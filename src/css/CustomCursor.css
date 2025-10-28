@@ -1,0 +1,43 @@
+/* Custom Cursor Styles */
+* {
+  cursor: url('/cursors/normal.cur'), auto;
+}
+
+/* Link cursor for clickable elements */
+a, 
+button, 
+[role="button"],
+[onclick],
+.btn,
+.nav-link,
+.login-btn,
+.checkout-btn,
+.quantity-btn,
+.remove-btn,
+.add-to-cart {
+  cursor: url('/cursors/link.cur'), pointer !important;
+}
+
+/* Text cursor for input fields */
+input,
+textarea,
+select,
+[contenteditable="true"],
+[type="text"],
+[type="email"],
+[type="password"],
+[type="search"] {
+  cursor: url('/cursors/text.cur'), text !important;
+}
+
+/* Busy/loading states */
+.loading,
+[aria-busy="true"],
+.busy {
+  cursor: url('/cursors/busy.ani'), wait !important;
+}
+
+/* Working in background */
+.working {
+  cursor: url('/cursors/working.ani'), progress !important;
+}
