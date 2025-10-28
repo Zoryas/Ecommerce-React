@@ -114,16 +114,15 @@
 }
 
 .cart-summary {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+  position: static;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 15px rgba(255, 99, 132, 0.2);
   padding: 15px;
-  width: 220px;
+  width: 100%;
+  max-width: 400px;
   border: 1px solid #ffe4e6;
-  z-index: 100;
+  margin: 30px auto 0;
 }
 
 /* Mobile styles for cart */
