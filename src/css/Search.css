@@ -1,0 +1,15 @@
+.search-page {
+  padding: 40px;
+  text-align: center;
+  color: #4b2e05;
+}
+
+.search-page h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.search-page p {
+  font-size: 1.1rem;
+  color: #888;
+}

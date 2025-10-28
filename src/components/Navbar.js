@@ -19,12 +19,12 @@ const Navbar = () => {
         <div className="logo-container">
           <Link to="/" className="nav-logo">
             {/*ice cream icon*/}
-            <img 
-              src={iceCreamIcon} 
-              alt="J & J Ice Cream" 
+            <img
+              src={iceCreamIcon}
+              alt="J & J Ice Cream"
               className="logo-icon"
             />
-            J & J - Ice Cream Shop
+            <span className="logo-text">J & J - Ice Cream Shop</span>
           </Link>
         </div>
 

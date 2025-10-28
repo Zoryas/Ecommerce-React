@@ -38,6 +38,10 @@ body {
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
 }
 
+.logo-text {
+  white-space: nowrap;
+}
+
 .nav-logo:hover {
   color: #d2691e; 
   transform: scale(1.05);
@@ -117,6 +121,7 @@ body {
   gap: 1.5rem;
   align-items: center;
   margin-left: auto;
+  flex-shrink: 0;
 }
 
 .nav-icon {
@@ -180,19 +185,21 @@ body {
 
 @media screen and (max-width: 768px) {
   .nav-container {
-    padding: 0 20px;
+    padding: 0 10px;
+    justify-content: space-between;
   }
-  
-  
+
+
    .nav-logo {
     font-size: 1.5rem;
+    flex-shrink: 0;
   }
-  
+
   .logo-icon {
     width: 35px;
     height: 35px;
   }
-  
+
    .nav-menu {
     position: fixed;
     left: -100%;
@@ -226,12 +233,15 @@ body {
 
   .nav-toggle {
     display: flex;
+    order: 3;
+    margin-left: 10px;
   }
 
   .nav-icons {
     gap: 1rem;
+    order: 2;
   }
-  
+
   .nav-icon {
     width: 40px;
     height: 40px;
@@ -243,14 +253,42 @@ body {
   .nav-logo {
     font-size: 1.3rem;
   }
-  
+
   .logo-icon {
     width: 30px;
     height: 30px;
   }
-  
+
+  .logo-text {
+    display: none;
+  }
+
   .nav-container {
     padding: 0 15px;
+  }
+}
+
+@media (max-height: 800px) {
+  .nav-container {
+    height: 100px;
+  }
+  body {
+    padding-top: 100px;
+  }
+  .logo-icon {
+    width: 50px;
+    height: 50px;
+  }
+  .nav-logo {
+    font-size: 2rem;
+  }
+  .nav-link {
+    font-size: 1.2rem;
+  }
+  .nav-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
   }
 }
 /*Custom Scrollbar*/
