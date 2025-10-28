@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { CartContext } from '../context/CartContext';
 import '../css/Products.css';
+import Background from '../components/Background'; 
 
 const Products = () => {
   const { addToCart } = useContext(CartContext);
@@ -100,6 +101,7 @@ const Products = () => {
   };
 
   return (
+    <Background>
     <div className="products-page">
       <h2 className="products-title">Our Flavors</h2>
       <div className="products-grid">
@@ -141,6 +143,7 @@ const Products = () => {
         ))}
       </div>
     </div>
+    </Background>
   );
 };
 

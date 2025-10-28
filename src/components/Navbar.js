@@ -47,7 +47,7 @@ const Navbar = () => {
           <Link to="/search" className="nav-icon">
             <i className="fas fa-search"></i>
           </Link>
-          <Link to="/account" className="nav-icon">
+          <Link to="/Login" className="nav-icon">
             <i className="fas fa-user"></i>
           </Link>
           <Link to="/cart" className="nav-icon">
